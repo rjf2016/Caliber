@@ -1,0 +1,107 @@
+body {
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+}
+
+#navContainer {
+	padding-left: 5%;
+}
+
+.navbar-default .navbar-brand {
+    color: #062440;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.navbar-brand {
+    font-size: 18px;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    color: #00568c; 	
+}
+
+#heroImageRow {
+	height: 600px;
+}
+
+#rowInsideImage {
+	padding-top: 40px;
+}
+
+
+#heroImage {
+	background-image: url("../images/caliberBackgroundBlur.png");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	min-height: 700px;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	
+}
+
+.contentHeader {
+	color: lightgray;
+	font-family: 'Roboto', serif;
+	margin-bottom: 10px;
+	font-weight: bold;
+	text-align: left;
+	font-size: 16px;
+	
+}
+
+.contentPar {
+	color: #CCCCCC;
+	font-size: 12px;
+	line-height: 2;
+}
+
+.contentSection	{
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.subSectionHeader {
+	color: lightgray;
+	font-family: 'Roboto', serif;
+	font-weight: bold;
+}
+
+.subSectionPar {
+	font-size: 17px;
+	color: #CCCCCC;
+	line-height: 1.6;
+}
+
+
+
+
+/*  Media Queries  */
+@media (min-width: 544px) {
+    .navbar-brand {
+        font-size: 32px;
+    }
+    #navContainer {
+    	padding-left: 10%;
+    }
+}
+
+@media (min-width: 1200px) {
+	.contentHeader {
+		margin-bottom: 30px;
+		font-size: 36px;
+	}
+	.contentPar {
+		font-size: 20px;
+	}
+	.contentSection {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
+
