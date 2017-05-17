@@ -1,107 +1,214 @@
 body {
-	width: 100%;
-	height: 100%;
-	left: 0px;
 	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background-image: url(../images/CaliberBackgroundImage.png);
 }
 
-#navContainer {
-	padding-left: 5%;
+.pageHeader {
+	background: #343434;
 }
 
-.navbar-default .navbar-brand {
-    color: #062440;
+#headerCol {
+	margin-bottom: 30px;
 }
 
-.navbar {
+#headerLogoImage {
+	width: 122px;
+	height: 90px;
+}
+
+#headerImageColumn {
+	padding-right: 0px;
+}
+
+#headerTitleColumn {
+	padding-left: 0px
+}
+
+#headerCompanyName {
+	margin-bottom: 0px;
+	margin-top: 5px;
+	color: white;
+	font-family: 'Merriweather', serif;
+	font-size: 32px;
+}
+
+#llcText {
+	font-size: 1px;
+	font-family: serif;
+	visibility: hidden;
+}
+
+#subHeader {
+	color: white;
+	margin-top: 20px;
 	margin-bottom: 0px;
 }
 
-.navbar-brand {
-    font-size: 18px;
-    font-family: 'Cinzel', serif;
-    font-weight: bold;
-    color: #00568c; 	
+.panel {
+	margin-bottom: 0px;
 }
 
-#heroImageRow {
-	height: 600px;
+.panel-heading {
+	font-size: 24px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 30px;
 }
 
-#rowInsideImage {
-	padding-top: 40px;
+.panel-title {
+	font-size: 24px;
+	font-family: 'Domine', serif;
 }
 
-
-#heroImage {
-	background-image: url("../images/caliberBackgroundBlur.png");
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: center;
-	min-height: 700px;
-	background-repeat: no-repeat;
-	width: 100%;
-	height: 100%;
-	
+.bulletPointItem {
+	display: block;
+	margin-bottom: 15px;
 }
 
-.contentHeader {
-	color: lightgray;
-	font-family: 'Roboto', serif;
+.glyphicon-unchecked {
+	font-size: 10px;
+	margin-right: 10px;
+	color: #D5D5D5;
+	margin-top: 3px;
+}
+
+.bulletPointText {
+	font-size: 14px;
+	margin-top: 0px;
+	color: white;
+	line-height: 1.3;
+}
+
+.howWeWorkPar {
+	font-size: 14px;
+	line-height: 1.2;
+	color: white;
+}
+
+.focusContentColumn {
+	margin-top: 10px;
+	margin-bottom: 0px;
+	padding-left: 20px;
+}
+
+#howWeWorkContentCol {
+	margin-top: 10px;
 	margin-bottom: 10px;
+	padding-left: 25px;
+}
+
+.sectorContentHeader {
 	font-weight: bold;
-	text-align: left;
 	font-size: 16px;
+	color: white;
+}
+
+.sectorContentCol {
+	margin-top: 10px;
+	margin-bottom: 15px;
+	padding-left: 25px;
+}
+
+.sectorPar {
+	margin-top: 5px;
+	font-size: 14px;
+	line-height: 1.2;
+	color: white;
+}
+
+.contactSectionHolder {
+	width: 200px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+#contactUsText {
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+#emailButton {
+	width: 80%;
+	letter-spacing: 2px;
+}
+
+
+
+@media (min-width: 786px) {
+
+	#headerCol {
+		margin-bottom: 45px;
+	}
+	#headerLogoImage {
+		width: 152px;
+		height: 113px;
+	}
+	#headerCompanyName {
+		font-size: 40px;
+	}
+	#llcText {
+		visibility: visible;
+		font-size: 16px;
+	}
+	.focusContentColumn {
+		margin-top: 25px;
+		margin-bottom: 10px;
+		padding-left: 15px		
+	}
+	.glyphicon-unchecked {
+		font-size: 16px;
+		margin-right: 15px;
+		margin-top: 5px;
+	}
+	.bulletPointText {
+		font-size: 24px;
+	}
+	.bulletPointItem {
+		margin-bottom: 25px;
+	}
+	#howWeWorkContentCol {
+		margin-top: 35px;
+		margin-bottom: 25px;
+		padding-left: 15px;
+	}
+	.howWeWorkPar {
+		font-size: 22px;
+		line-height: 1.5;
+	}
+	.sectorContentCol {
+		margin-top: 20px;
+		margin-bottom: 25px;
+		padding-left: 15px;
+	}
+	.sectorContentHeader {
+		font-size: 24px;
+	}
+	.sectorPar {
+		font-size: 18px;
+		line-height: 1.5;
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 432px) {
+	#headerLogoImage {
+		width: 76px;
+		height: 57px;
+	}
 	
-}
-
-.contentPar {
-	color: #CCCCCC;
-	font-size: 12px;
-	line-height: 2;
-}
-
-.contentSection	{
-	padding-left: 10%;
-	padding-right: 10%;
-}
-
-.subSectionHeader {
-	color: lightgray;
-	font-family: 'Roboto', serif;
-	font-weight: bold;
-}
-
-.subSectionPar {
-	font-size: 17px;
-	color: #CCCCCC;
-	line-height: 1.6;
-}
-
-
-
-
-/*  Media Queries  */
-@media (min-width: 544px) {
-    .navbar-brand {
-        font-size: 32px;
-    }
-    #navContainer {
-    	padding-left: 10%;
-    }
-}
-
-@media (min-width: 1200px) {
-	.contentHeader {
-		margin-bottom: 30px;
-		font-size: 36px;
-	}
-	.contentPar {
+	#headerCompanyName {
 		font-size: 20px;
+		padding-left: 3px;
+		margin-top: 3px;
 	}
-	.contentSection {
-		padding-left: 5%;
-		padding-right: 5%;
+	#subHeader {
+		font-size: 14px;
+		margin-top: 10px;
+		padding-left: 3px;
 	}
-}
-
+}	
