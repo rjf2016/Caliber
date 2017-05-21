@@ -135,7 +135,7 @@
 				</form>		
 
 
-				<div id="result"></div>
+				<div class="bulletPointText" id="result"></div>
 
 
 		</center>
@@ -195,8 +195,8 @@ var data = {
      ajaxRequest.done(function (response, textStatus, jqXHR){
           // show successfully for submit message
           $("#result").html('Submitted successfully');
-          console.log(response);
           console.log("Thanks, email captured!");
+          $('#email_name').removeAttr('value');  //clear the field
      });
 
      /* On failure of request this function will be called  */

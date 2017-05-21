@@ -8,17 +8,15 @@ require 'vendor/autoload.php';
 // require("path/to/sendgrid-php/sendgrid-php.php");
 $client_email = $_POST['email'];
 
-error_log("Here comes the email:");
+error_log("---email start---");
 error_log($client_email);
-error_log("There goes the email:");
+error_log("---email end---");
 
 
 //echo $response->$client_email;
 
 
-
-
-$from = new SendGrid\Email("Caliber User", "tjf081@gmail.com");
+$from = new SendGrid\Email("Caliber User", $client_email);   //"tjf081@gmail.com");
 $subject = "Email from Caliber Partners site";
 $to = new SendGrid\Email("New User", "tjf081@gmail.com");
 $content = new SendGrid\Content("text/plain", "New email from: " . $client_email);
