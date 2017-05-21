@@ -10,6 +10,12 @@ $client_email = $_POST['email'];
 echo $response->$client_email;
 
 
+$c = $_POST['email_name'];
+echo $response->$c;
+
+
+
+
 // $from = new SendGrid\Email("Caliber User", "tjf081@gmail.com");
 // $subject = "Email from Caliber Partners site";
 // $to = new SendGrid\Email("New User", "tjf081@gmail.com");
