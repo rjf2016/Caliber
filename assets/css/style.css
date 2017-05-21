@@ -135,6 +135,7 @@ body {
 #emailButton {
 	width: 80%;
 	letter-spacing: 2px;
+	margin-bottom: 10px;
 }
 
 
@@ -200,9 +201,7 @@ body {
 		width: 76px;
 		height: 57px;
 	}
-	#headerImageColumn {
-
-	}
+	
 	#headerCompanyName {
 		font-size: 20px;
 		padding-left: 3px;
