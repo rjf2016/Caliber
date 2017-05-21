@@ -186,7 +186,8 @@ var data = {
        ajaxRequest= $.ajax({
             url: "sendmail2.php",
             type: "post",
-            data: data
+            data: 'email=' + $("#email_name").val() // or data: {email: email}
+   
         });
 
       /*  request cab be abort by ajaxRequest.abort() */
