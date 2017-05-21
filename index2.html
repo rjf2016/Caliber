@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Caliber Partners uses its network of consultants, key healthcare thought-leaders and strategic investment partners to help our clients achieve their goals.">
+
+	<title>Caliber Partners</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Merriweather|Domine" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+
+		<!-- Top of Header -->
+		<div class="row" id="headerRow">
+			<div class="col-lg-12 col-xs-12" id="headerCol">
+				<div class="pageHeader">
+					<div class="row">
+						<div class="col-lg-2 col-md-3 col-xs-4 " id="headerImageColumn">
+							<img id="headerLogoImage" src="assets/images/chromeLogo.png">
+						</div>
+						<div class="col-lg-5 col-xs-8" id="headerTitleColumn">	
+							<h1 id="headerCompanyName">Caliber Partners<span id="llcText">,  LLC</span></h1>
+							<h3 id="subHeader">Healthcare Consulting</h3>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of Header -->
+
+		<!-- Top of 'Our Focus' row-->
+		<div class="row" id="ourFocusRow">
+			<div class="col-lg-12 col-xs-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h2 class="panel-title">Our Focus</h2>
+					</div>
+				</div>	
+			</div>
+
+			<div class="col-lg-4 col-lg-offset-1 col-xs-6 focusContentColumn">
+				<span class="bulletPointItem" id="topBulletPoints">
+					<i class="pull-left glyphicon glyphicon-unchecked" aria-hidden="true"></i>
+					<h3 class="bulletPointText">Strategic Partnerships</h3>
+				</span>
+
+				<span class="bulletPointItem">
+					<i class="pull-left glyphicon glyphicon-unchecked" aria-hidden="true"></i>
+					<h3 class="bulletPointText">Business Development</h3>
+				</span>
+			</div>
+
+			<div class="col-lg-4 col-lg-offset-1 col-xs-6 focusContentColumn">
+				<span class="bulletPointItem">
+					<i class="pull-left glyphicon glyphicon-unchecked" aria-hidden="true"></i>
+					<h3 class="bulletPointText">Management Consulting</h3>
+				</span>
+				<span class="bulletPointItem">
+					<i class="pull-left glyphicon glyphicon-unchecked" aria-hidden="true"></i>
+					<h3 class="bulletPointText">Practice Development</h3>
+				</span>
+			</div>
+		</div>
+		<!-- End of 'Our Focus' row -->
+
+		<!-- Top of 'How We Work' row -->
+		<div class="row" id="howWeWorkRow">
+			<div class="col-lg-12 col-xs-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h2 class="panel-title">How We Work</h2>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12 col-xs-12" id="howWeWorkContentCol">
+				<p class="howWeWorkPar">Caliber Partners uses its knowledge, experience and powerful network of consultants, senior executives, key healthcare thought-leaders and strategic investment partners to help our clients achieve their goals.</p>
+			</div>
+		</div>
+		<!-- End of 'How We Work' row -->
+
+		<!-- Top of 'Our Sectors' row-->
+		<div class="row" id="ourSectorsRow">
+			<div class="col-lg-12 col-xs-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h2 class="panel-title">Our Sectors</h2>
+					</div>
+				</div>				
+			</div>
+
+			<div class="col-lg-6 col-xs-6 sectorContentCol">
+				<h3 class="sectorContentHeader">Life Sciences Companies:</h3>
+				<p class="sectorPar">We help clients of all sizes and at all stages navigate the new healthcare ecosystem by developing revenue opportunities, and facilitating strategic partnerships & investments.</p>
+			</div>
+
+			<div class="col-lg-6 col-xs-6 sectorContentCol">
+				<h3 class="sectorContentHeader">Healthcare Providers:</h3>
+				<p class="sectorPar">We partner with healthcare providers through traditional practice development and management consulting as well as helping providers launch commercial ventures.</p>
+			</div>
+		</div>
+		<!-- End of 'Our Sectors' row-->
+
+		<hr>
+
+		<!-- Top of 'mailto' form -->
+		<!--
+		<div class="row">
+			<div class="contactSectionHolder">
+				<h3 id="contactUsText">Contact Us</h3>
+				<br>
+				<a id="emailButton" class="btn btn-primary" href="mailto:rfahey@caliberpartners.org" role="button">SEND EMAIL</a>
+			</div>
+		</div>
+		-->
+		<!-- End of 'mailto' form -->
+		<center>
+		
+
+				<form class="form-inline" id="contact-form">
+					<div class="form-group"> 
+						<input type="email" class="form-control" id="email_id" name="email_name" placeholder="Enter your email address">
+					</div>
+					
+					<div class="form-group"> 
+						<button type="submit" class="btn btn-primary">Contact Me</button>
+					</div>		
+				</form>		
+
+
+				<div id="result"></div>
+
+
+		</center>
+
+			</div>
+		</div>
+
+	</div>
+
+<script>
+var request;
+/* Attach a submit handler to the form */
+$("#contact-form").submit(function(event) {
+     var ajaxRequest;
+
+
+    /* Stop form from submitting normally */
+    event.preventDefault();
+
+     // Abort any pending request
+    if (request) {
+        request.abort();
+    }
+    // setup some local variables
+    var $form = $(this);
+
+    // Let's select and cache all the fields
+    var $inputs = $form.find("input, select, button, textarea");
+
+    // Serialize the data in the form
+    var serializedData = $form.serialize();
+
+   // Let's disable the inputs for the duration of the Ajax request.
+    // Note: we disable elements AFTER the form data has been serialized.
+    // Disabled form elements will not be serialized.
+    $inputs.prop("disabled", true);
+
+
+    /* Send the data using post and put the results in a div */
+    /* I am not aborting previous request because It's an asynchronous request, meaning 
+       Once it's sent it's out there. but in case you want to abort it  you can do it by  
+       abort(). jQuery Ajax methods return an XMLHttpRequest object, so you can just use abort(). */
+       ajaxRequest= $.ajax({
+            url: "sendmail2.php",
+            type: "post",
+            data: serializedData
+        });
+
+      /*  request cab be abort by ajaxRequest.abort() */
+
+     ajaxRequest.done(function (response, textStatus, jqXHR){
+          // show successfully for submit message
+          $("#result").html('Submitted successfully');
+          console.log(response);
+          console.log("Thanks, email captured!");
+     });
+
+     /* On failure of request this function will be called  */
+     ajaxRequest.fail(function (){
+
+       // show error
+       $("#result").html('An error occured while submitting.');
+     });
+
+});
+</script>
+
+
+
+</body>
+</html>
