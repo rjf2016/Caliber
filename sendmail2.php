@@ -9,14 +9,18 @@ require 'vendor/autoload.php';
 $client_email = $_POST['email_id'];
 
 //$from = new SendGrid\Email("Caliber User", "tjf081@gmail.com");
-$from = new SendGrid\Email("Caliber User", $client_email);
+$from = new SendGrid\Email("Caliber User", "tjf081@gmail.com");
 $subject = "Email from Caliber Partners site";
 $to = new SendGrid\Email("New User", "tjf081@gmail.com");
-$content = new SendGrid\Content("text/plain", "New email from: " . ' ' . $client_email);
+$content = new SendGrid\Content("text/plain", "New email from: " . $client_email);
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
+
 $apiKey = getenv('SENDGRID_API_KEY');
+
 $sg = new \SendGrid($apiKey);
+
 $response = $sg->client->mail()->send()->post($mail);
+
 echo $response->statusCode();
 //echo $response->headers();
 //echo $response->body();
