@@ -15,11 +15,10 @@ error_log("---email end---");
 
 //echo $response->$client_email;
 
-
-$from = new SendGrid\Email("Caliber User", $client_email);   //"tjf081@gmail.com");
-$subject = "Email from Caliber Partners site";
-$to = new SendGrid\Email("New User", "tjf081@gmail.com");
-$content = new SendGrid\Content("text/plain", "New email from: " . $client_email);
+$from = new SendGrid\Email("Caliber Guest", $client_email);   //"tjf081@gmail.com");
+$subject = "Inquiry from Caliber Partners site";
+$to = new SendGrid\Email("New User", "rfahey@caliberpartners.org");
+$content = new SendGrid\Content("text/plain", "Someone submitted the following email address on the Caliber Partners website: " . $client_email);
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
 $apiKey = getenv('SENDGRID_API_KEY');
