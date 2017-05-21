@@ -126,7 +126,7 @@
 
 				<form class="form-inline" id="contact-form">
 					<div class="form-group"> 
-						<input type="email" class="form-control" id="email_id" name="email_name" placeholder="Enter your email address">
+						<input type="email" class="form-control" id="email_name" name="email_name" placeholder="Enter your email address">
 					</div>
 					
 					<div class="form-group"> 
@@ -159,14 +159,19 @@ $("#contact-form").submit(function(event) {
     if (request) {
         request.abort();
     }
+
+var data = {
+    email: $("#form_email").val()
+};
+
     // setup some local variables
-    var $form = $(this);
+   // var $form = $(this);
 
     // Let's select and cache all the fields
-    var $inputs = $form.find("input, select, button, textarea");
+   // var $inputs = $form.find("input, select, button, textarea");
 
     // Serialize the data in the form
-    var serializedData = $form.serialize();
+   // var serializedData = $form.serialize();
 
    // Let's disable the inputs for the duration of the Ajax request.
     // Note: we disable elements AFTER the form data has been serialized.
@@ -181,7 +186,7 @@ $("#contact-form").submit(function(event) {
        ajaxRequest= $.ajax({
             url: "sendmail2.php",
             type: "post",
-            data: serializedData
+            data: data
         });
 
       /*  request cab be abort by ajaxRequest.abort() */
