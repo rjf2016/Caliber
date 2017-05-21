@@ -6,7 +6,7 @@
 require 'vendor/autoload.php';
 // If you are not using Composer
 // require("path/to/sendgrid-php/sendgrid-php.php");
-$client_email = $_POST['email_name'];
+$client_email = $_POST['email'];
 echo $response->$client_email;
 
 
