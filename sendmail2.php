@@ -7,6 +7,12 @@ require 'vendor/autoload.php';
 // If you are not using Composer
 // require("path/to/sendgrid-php/sendgrid-php.php");
 $client_email = $_POST['email'];
+
+error_log("Here comes the email:");
+error_log($client_email);
+error_log("There goes the email:");
+
+
 echo $response->$client_email;
 
 
